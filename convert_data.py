@@ -1,7 +1,5 @@
 import numpy as np
 
-
-
 def parse_data(input_file):
 	#INPUT: An input file containing the data
 	#OUTPUT: Returns a vector of inputs and a vector of targets
@@ -40,7 +38,7 @@ def parse_data(input_file):
 
 
 if __name__ == '__main__':
-
-	X, T = parse_data("data.txt")
-	print(X)
-	print(T)
+	pass
+	#X, T = parse_data("data.txt")
+	#print(X)
+	#print(T)
