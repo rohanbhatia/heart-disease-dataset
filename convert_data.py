@@ -39,6 +39,4 @@ def parse_data(input_file):
 
 if __name__ == '__main__':
 	pass
-	#X, T = parse_data("data.txt")
-	#print(X)
-	#print(T)
+	
