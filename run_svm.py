@@ -18,3 +18,5 @@ if __name__ == '__main__':
 
 	svm.svm_rbf(x_train, y_train, x_test, y_test)
 
+	svm.svm_sigmoid(x_train, y_train, x_test, y_test)
+

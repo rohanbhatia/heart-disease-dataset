@@ -3,7 +3,7 @@ from sklearn import svm
 #used some ideas from http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 #linear poly rbf sigmoid
 
-#linear
+#linear kernel
 def svm_linear(x_train, y_train, x_test, y_test):
 
 	classifier = svm.SVC(kernel='linear')
@@ -13,7 +13,7 @@ def svm_linear(x_train, y_train, x_test, y_test):
 	print("Performance: "  + str(classifier.score(x_test, y_test)))
 	print("")
 
-#polynomials from degrees 2 to 5
+#polynomial kernel from degrees 2 to 5
 def svm_poly(x_train, y_train, x_test, y_test):
 
 	for d in [2, 3, 4, 5]:	
@@ -26,7 +26,7 @@ def svm_poly(x_train, y_train, x_test, y_test):
 		print("Performance: "  + str(classifier.score(x_test, y_test)))
 		print("")
 
-#radial basis function
+#radial basis function kernel
 def svm_rbf(x_train, y_train, x_test, y_test):
 
 	classifier = svm.SVC(kernel='rbf')
@@ -36,4 +36,13 @@ def svm_rbf(x_train, y_train, x_test, y_test):
 	print("Performance: "  + str(classifier.score(x_test, y_test)))
 	print("")
 
+#sigmoid function kernel
+def svm_sigmoid(x_train, y_train, x_test, y_test):
+
+	classifier = svm.SVC(kernel='sigmoid')
+	classifier.fit(x_train, y_train)
+	
+	print("Kernel: Sigmoid")
+	print("Performance: "  + str(classifier.score(x_test, y_test)))
+	print("")
 
