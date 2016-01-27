@@ -36,7 +36,6 @@ def parse_data(input_file):
 
 	return X, T
 
-
 if __name__ == '__main__':
 	pass
 	

@@ -1,21 +1,26 @@
 from sklearn import svm
 
-def train_svm(x_train, y_train, x_test, y_test, kernel=None):
+#used some ideas from http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+#linear poly rbf sigmoid precomputed
 
-	classifier = svm.SVC()
+def svm_linear(x_train, y_train, x_test, y_test):
+
+	classifier = svm.SVC(kernel='linear')
 	classifier.fit(x_train, y_train)
+	
+	print("Kernel: Linear")
+	print("Performance: "  + str(classifier.score(x_test, y_test)))
+	print("")
 
-	m = len(x_test)
-	correct = 0
-	count = 0
+def svm_poly(x_train, y_train, x_test, y_test):
 
-	while(count < m):
-
-		y = classifier.predict(x_test[count])
-
-		print(y)
-
-		count += 1
-
-
+	for d in [2, 3, 4, 5]:	
+		
+		classifier = svm.SVC(kernel='poly', degree=d, max_iter=400000)
+		classifier.fit(x_train, y_train)
+		
+		print("Kernel: Polynomial")
+		print("Degree: " + str(d))
+		print("Performance: "  + str(classifier.score(x_test, y_test)))
+		print("")
 
