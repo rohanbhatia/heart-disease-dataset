@@ -226,10 +226,10 @@ def get_best_model_features(x_train, t_train, x_test, t_test):
 	print("Most negative features: " + str(lowest_features))
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
 	
-	x_train, t_train = parse_data("spambase.train.txt")
-	x_test, t_test = parse_data("spambase.test.txt")
+	#x_train, t_train = parse_data("spambase.train.txt")
+	#x_test, t_test = parse_data("spambase.test.txt")
 
 	# print("\nLogistic Regression")
 	# run_regression(True, 30, "Logistic Regression", x_train, t_train, x_test, t_test)
@@ -243,8 +243,8 @@ if __name__ == '__main__':
 	# print("\nBinary-transform Logistic Regression")
 	# run_regression(True, 30, "Binary-transform Logistic Regression", x_train, t_train, x_test, t_test)
 
-	print("\nBest model's highest features")
-	get_best_model_features(x_train, t_train, x_test, t_test)
+	#print("\nBest model's highest features")
+	#get_best_model_features(x_train, t_train, x_test, t_test)
 
 
 
