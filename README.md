@@ -1,2 +1,2 @@
-# SVM-Heart-Disease
-A Python implementation of an SVM for use on the Heart Disease dataset
+# Heart-Disease
+A Python implementation of Machine Learning Algos for use on the Heart Disease dataset
